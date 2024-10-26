@@ -46,6 +46,15 @@ class PlaceController extends Controller
             'place' => $place,
         ]);
     }
+    public function destroy(Request $request, $id)
+    {
+        // dd($id);
+        $place = Place::find($id);
+        if ($place) {
+            $place->delete();
+        }
+        return redirect('/');
+    }
     public function like($id)
     {
         $place = Place::findOrFail($id);

@@ -29,5 +29,6 @@ Route::get('/', [PlaceController::class, 'index'])->name('places.index');
 Route::get('/place/create', [PlaceController::class, 'create'])->name('places.create');
 Route::post('/places', [PlaceController::class, 'store'])->name('places.store');
 Route::get('/place/{id}', [PlaceController::class, 'show'])->name('places.show');
+Route::delete('/place/{id}', [PlaceController::class, 'destroy'])->name('places.destroy');
 Route::post('places/{place}/like', [PlaceController::class, 'like'])->name('places.like');
 });
