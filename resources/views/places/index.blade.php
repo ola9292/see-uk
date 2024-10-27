@@ -3,6 +3,8 @@
 @section('content')
    <div class="container-sm">
     <h3 style="margin-bottom: 20px">UK's beautiful places</h3>
+    <p style="margin: 10px 0"><a class="link" href="{{ route('places.create') }}">Create yours</a></p>
+
     @if(count($places) > 0)
         <div class="flex flex-col">
             @foreach ($places as $place)
